@@ -99,7 +99,7 @@ export class CreatePostComponent implements OnInit {
       var publi= new Post();
       publi.title=title
       publi.data=item
-      console.log(publi)
+      publi.user_id=localStorage.getItem("id")||""
       this.postService.postPost(publi).subscribe((res)=>{
         window.location.replace("http://localhost:4200/post/"+res._id);
       }

@@ -17,10 +17,11 @@ const coment = Joi.array().items(Joi.object({
 }))
 
 const createPostSchema = Joi.object({
+  id:Joi.any(),
   title:title.required(),
   user_id:user_id.required() ,
   data:data.required(),
-  coment:coment.required()
+  comentario:coment
 });
 
 
