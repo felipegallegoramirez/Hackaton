@@ -1,0 +1,66 @@
+.body{
+    margin-top: 35px;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "info feed"
+                         "info feed";
+    width: 100%;
+    
+}
+.info{
+    padding: 5px;
+    background-color: var(--sw);
+    width: 100%;
+    grid-column-start:info;
+    grid-column-end: info;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+.feed{
+    background-color: var(--sw);
+    width: 90%;
+    padding: 10px;
+    margin-right: 35px;
+    grid-column-start:feed;
+    grid-column-end: feed;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BoxPub{
+    width: 50%;
+    height: fit-content;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    border-radius: 10px;
+
+}
+.main-pub{
+    padding: 15px;
+    height: fit-content;    
+}
+.Comments{
+    background-color: var(--w);
+    padding: 10px;
+}
+.Comments :nth-child(2){
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 800;
+}
+.Comments :nth-child(3){
+    font-size: 12px;
+}
+.option-comment input{
+    width: 100%;
+    border-radius: 50px;
+}
+.option-comment p{
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 2px;
+}
