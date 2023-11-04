@@ -13,29 +13,29 @@ const StorageScheme = new mongoose.Schema(
       trim: true
     },
 
-    data:[{
-      ty:{ // Esto es que tipo de archivo es (Imagen, Parrafo, )
-        type: String,
-      },
-      data:{
-        type: String,
-      }
+    imgurl:{
+      type:String
+    },
+
+    stage:{
+      type:String
+    },
+
+    date:{
+      type:String
+    },
+
+    users:[{
+      type:String
     }],
 
-    comentario:[{
-      text:{
-        type: String,
+    position:[{
+      user:{
+        type:String
       },
-      date:{
-        type: String,
-      },
-      user_id:{
-        type: String,
-      },
-      user_name:{
-        type: String,
+      points:{
+        type:Number
       }
-
     }]
 
   },

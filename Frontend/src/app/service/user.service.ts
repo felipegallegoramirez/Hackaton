@@ -15,11 +15,9 @@ export class UserService {
 
 
   postAuth(data: any) {
-    return this.http.post<any>('http://localhost:3000/api/auth', data);
+    return this.http.post<Sesion>('http://localhost:3000/api/auth', data);
   }
-  postAuthCode(data: any,id:string) {
-    return this.http.post<any>('http://localhost:3000/api/customer'+`/${id}`, data);
-  }
+ 
 
 
   createUser(user: User){
