@@ -13,14 +13,14 @@ const StorageScheme = new mongoose.Schema(
       trim: true
     },
 
-    data:{
+    data:[{
       ty:{ // Esto es que tipo de archivo es (Imagen, Parrafo, )
         type: String,
       },
       data:{
         type: String,
       }
-    },
+    }],
 
     comentario:[{
       text:{
