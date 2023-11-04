@@ -11,19 +11,32 @@ import { LoginComponent } from './login/login.component';
 import { PerfilUserComponent } from './perfil-user/perfil-user.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { ViewPostComponent } from './view-post/view-post.component';
+<<<<<<< HEAD
+import { PerfilUserprivateComponent } from './perfil-userprivate/perfil-userprivate.component';
+=======
 import { ChallengesComponent } from './challenges/challenges.component';
+>>>>>>> d0fb3f975eeb84ca906a7489ec6de0075f3413b5
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+<<<<<<< HEAD
+      LoginComponent,
+      PerfilUserComponent,
+    LoginComponent,
+    CreatePostComponent,
+    ViewPostComponent,
+    PerfilUserprivateComponent,
+=======
     LoginComponent,
     PerfilUserComponent,
     LoginComponent,
     CreatePostComponent,
     ViewPostComponent,
     ChallengesComponent,
+>>>>>>> d0fb3f975eeb84ca906a7489ec6de0075f3413b5
     
   ],
   imports: [
