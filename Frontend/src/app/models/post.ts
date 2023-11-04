@@ -1,6 +1,7 @@
 export class Post {
     id:String="";
     title: string = '';
+    username: string = '';
     user_id: string = '';
     data: IData[] = [];
     comentario: IComentario[] = [];
@@ -8,9 +9,11 @@ export class Post {
     constructor(
       title: string = '',
       user_id: string = '',
+      username: string = '',
       data: IData[] = [],
       comentario: IComentario[] = []
     ) {
+      this.username = username;
       this.title = title;
       this.user_id = user_id;
       this.data = data;
