@@ -29,7 +29,6 @@ const loginCtrl = async (req, res, next) => {
 
     user = await User.findByIdAndUpdate(user._id, user)
     console.log(x)
-    var user = await User.findById(id);
     var ipguard = req.header('x-forwarded-for') || req.connection.remoteAddress;
       console.log("No ip")
       if (!user.ips.find(x => x === ipguard)) {
@@ -44,6 +43,7 @@ const loginCtrl = async (req, res, next) => {
       const data = {
         token: tokenJwt,
         id: user._id,
+        name: user.name
       };
 
 
