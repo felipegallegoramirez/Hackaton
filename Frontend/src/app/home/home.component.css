@@ -1,0 +1,72 @@
+.body{
+    margin-top: 35px;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "info feed"
+                         "info feed";
+    width: 100%;
+    
+}
+.info{
+    position: sticky;
+    padding: 5px;
+    background-color: var(--sw);
+    width: 100%;
+    grid-column-start:info;
+    grid-column-end: info;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    border-bottom: var(--c1) 5px solid;
+}
+.feed{
+    background-color: var(--sw);
+    width: 90%;
+    padding: 10px;
+    margin-right: 35px;
+    grid-column-start:feed;
+    grid-column-end: feed;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BoxPub{
+    border: var(--c1) 2px solid;
+    width: 50%;
+    height: fit-content;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.button{
+    background-color: none;
+    border: none;
+    outline: none;    
+}
+.main-pub{
+    padding: 15px;
+    height: fit-content;    
+}
+.Like{
+    width: 30px;
+}
+.User{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    
+}
+.User h3{
+    margin-left: 20px;
+    margin-top: 8px;
+}
+.photo-user{
+    width: 35px;
+    height: auto;
+    object-fit: cover;
+}

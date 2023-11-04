@@ -46,4 +46,4 @@ const StorageScheme = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.models.Users || mongoose.model("Post", StorageScheme);
+module.exports = mongoose.models.Challenge || mongoose.model("Challenge", StorageScheme);
