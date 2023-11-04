@@ -6,7 +6,6 @@ export class User{
     publication: string[] = [];
     follows: string[] = [];
     followers: string[] = [];
-    permissions: number[] = [];
 
     constructor(
         name: string = '',
@@ -14,8 +13,7 @@ export class User{
         password: string = '',
         publication: string[] = [],
         follows: string[] = [],
-        followers: string[] = [],
-        permissions: number[] = []
+        followers: string[] = []
       ) {
         this.name = name;
         this.email = email;
@@ -23,7 +21,6 @@ export class User{
         this.publication = publication;
         this.follows = follows;
         this.followers = followers;
-        this.permissions = permissions;
       }
   }
 

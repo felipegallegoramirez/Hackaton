@@ -72,10 +72,10 @@ export class LoginComponent {
       "email": this.formLogin.value.email || " ",
       "password": this.formLogin.value.password || " "
     }
-
+    console.log("hola")
     
-    console.log(data)
     this.userService.postAuth(data).subscribe(res => {
+      console.log("hola")
       let sesion = res as Sesion
       if (sesion) {
         
