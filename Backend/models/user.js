@@ -1,7 +1,5 @@
 const { string, number } = require("joi");
 const mongoose = require("mongoose");
-//const mongoosePaginate = require("mongoose-paginate-v2");
-//const mongoosePaginateAggregate = require("mongoose-aggregate-paginate-v2");
 const StorageScheme = new mongoose.Schema(
   {
     name: {
@@ -19,20 +17,20 @@ const StorageScheme = new mongoose.Schema(
       require: true,
     },
 
-    rol: [{
+    publication: [{
+      type: String,
+    }],
+
+    follows: [{
+      type: String,
+    }],
+
+    followers:[{
       type: String,
     }],
 
     permissions: [{
       type: Number,
-    }],
-
-    files_id: [{
-      type: String,
-    }],
-
-    post_id: [{
-      type: String,
     }],
 
     verified: {
