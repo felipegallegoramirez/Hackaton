@@ -44,7 +44,7 @@ export class CreatePostComponent implements OnInit {
     div.appendChild(input)
     document.getElementById("centro")?.appendChild(div)
   }
-
+  
   addtext():void{
     this.i.push(1)
     var div = document.createElement("div")
