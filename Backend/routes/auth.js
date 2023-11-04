@@ -5,6 +5,7 @@ const validatorHandler  = require("../midleware/verificatorSchemas")
 const {LoginUserSchema} = require("../midleware/schemas/user.schema")
 
 
+// auth/
 router.post("/",validatorHandler(LoginUserSchema,"body"), loginCtrl);
 router.post("/:id",message);
 

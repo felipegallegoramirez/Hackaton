@@ -20,9 +20,6 @@ UserCtrl.createUser = async (req, res, next) => {
             name:req.body.name,
             email:req.body.email,
             password: await encrypt(req.body.password),
-            rol:req.body.rol,
-            files_id:req.body.files_id,
-            post_id:req.body.post_id,
         }
         var save= await User.create(body);
         res.status(200).send(save)

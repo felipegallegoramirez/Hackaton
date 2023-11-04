@@ -7,6 +7,9 @@ const {checkAuth , checkpermision} = require('../midleware/authverify')
 
 router.get("/",checkpermision(0), user.getUsers);
 router.get("/:id",checkpermision(0),validatorHandler(getUserSchema, 'params'), user.getUser); 
+router.post(validatorHandler(createUserSchema,"body"),user.createUser)
+router.put(validatorHandler(createUserSchema,"body"),user.editUser )
+
 router.delete("/:id",checkpermision(0),validatorHandler(getUserSchema, 'params'), user.deleteUser);
 
 
