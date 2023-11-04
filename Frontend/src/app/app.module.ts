@@ -8,6 +8,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { CreatePostComponent } from './create-post/create-post.component';
+import { ViewPostComponent } from './view-post/view-post.component';
 
 
 @NgModule({
@@ -16,6 +18,8 @@ import { LoginComponent } from './login/login.component';
 
     HomeComponent,
       LoginComponent,
+      CreatePostComponent,
+      ViewPostComponent,
     
   ],
   imports: [
