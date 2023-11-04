@@ -18,8 +18,8 @@ import { ChallengesComponent } from './challenges/challenges.component';
   declarations: [
     AppComponent,
     HomeComponent,
-      LoginComponent,
-      PerfilUserComponent,
+    LoginComponent,
+    PerfilUserComponent,
     LoginComponent,
     CreatePostComponent,
     ViewPostComponent,
