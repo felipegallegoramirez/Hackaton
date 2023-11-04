@@ -9,7 +9,7 @@ import { User } from '../models/user';
 })
 export class UserService {
 
-  private apiUrl = 'http://localhost:3000/api/customer'; 
+  private apiUrl = 'http://localhost:3000/api/user'; 
 
   constructor(private http: HttpClient) { }
 
@@ -29,7 +29,7 @@ export class UserService {
   }
 
   putUser(User: User){
-    return this.http.put(this.apiUrl + `/`, User);
+    return this.http.put(this.apiUrl + `/${User.id}`, User);
   }
 
   getUsers(){
