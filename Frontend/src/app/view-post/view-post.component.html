@@ -1,3 +1,12 @@
 <div id="centro"class="centro">
     <h1 id="titulo"></h1>
 </div>
+
+<div class="centro">
+    <input id="comentar" type="text">
+    <button (click)="comentario()">Comentar</button>
+    <div class="comentario" *ngFor="let com of data.comentario">
+            <p>{{com.user_name}}</p>
+            <p>{{com.text}}</p>
+    </div>
+</div>

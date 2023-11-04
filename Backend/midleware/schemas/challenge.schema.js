@@ -24,7 +24,7 @@ const createChallengeSchema = Joi.object({
 
 
 const updateChallengeSchema = Joi.object({
-  id:id ,
+  _id:id ,
   title:title,
   user_id:user_id,
   imgurl:imgurl,

@@ -17,6 +17,7 @@ export class HomeComponent {
 
     ngOnInit():void{
       this.postService.getPosts().subscribe(( res ) => {
+        console.log(res)
         this.Cards = res as Post[]
       })
     }

@@ -21,16 +21,17 @@ const createPostSchema = Joi.object({
   title:title.required(),
   user_id:user_id.required() ,
   data:data.required(),
-  comentario:coment
+  comentario:coment,
+  username:Joi.string()
 });
 
 
 const updatePostSchema = Joi.object({
-  id:id ,
+  _id:id ,
   title:title,
   user_id:user_id,
-  data:data,
-  coment:coment
+  data:Joi.any(),
+  comentario:coment
 });
 
 

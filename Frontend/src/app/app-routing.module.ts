@@ -11,9 +11,9 @@ import { ChallengesComponent } from './challenges/challenges.component';
 const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'login', component: LoginComponent},
-    {path: 'perfilUser', component: PerfilUserComponent},
     {path: 'createPost', component: CreatePostComponent},
     {path: 'post/:id', component: ViewPostComponent},
+    {path: 'perfilUser', component: PerfilUserComponent},
 ]
 
 @NgModule({
