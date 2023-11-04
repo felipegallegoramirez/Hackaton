@@ -34,7 +34,7 @@ export class UserService {
   }
 
   getPostsUnique(id:string){
-    return this.http.get<Post[]>(this.apiUrl+`/getPostsUnique/${id}`);
+    return this.http.get<Post[]>(`http://localhost:3000/api/post/getPostsUnique/${id}`);
   }
 
   getUsers(){

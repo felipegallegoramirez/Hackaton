@@ -23,9 +23,12 @@ export class PerfilUserComponent implements OnInit{
 
   ngOnInit(): void{
     this.activatedRoute.params.subscribe(params => {
-      var idsession = params['_id'];
+      var idsession = params['id'];
 
-      this.userService.getPostsUnique(idsession).subscribe(( res ) => {this.Cards = res as Post[]})
+      this.userService.getPostsUnique(idsession).subscribe(( res ) => { 
+        console.log(res)
+        this.Cards = res as Post[]}
+        )
       this.userService.getUser(idsession).subscribe(( res ) => {this.User = res as User})
     })
   }

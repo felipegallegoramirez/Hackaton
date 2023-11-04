@@ -59,7 +59,7 @@
         </div>
     </div>
 
-        <div *ngFor="let Card of Cards">
+        <div routerLink="/post/{{Card._id}}" *ngFor="let Card of Cards">
 
             <div class="BoxPub">
                 <div class="User">

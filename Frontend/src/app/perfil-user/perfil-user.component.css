@@ -19,8 +19,7 @@
  
 }
 img{
-    width: 28px;
-    height: 28px;
+    width: 600px;
     object-fit: cover;
     cursor: pointer;
     
@@ -107,7 +106,7 @@ border-top: none;
     border-radius: 10px;
     cursor: pointer;
     margin-left: 650px;
-   margin-top: -999px;
+   margin-top: -980px;
 
 }
 .button{
