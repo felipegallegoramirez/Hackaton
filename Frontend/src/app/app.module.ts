@@ -15,11 +15,10 @@ import { ViewPostComponent } from './view-post/view-post.component';
 @NgModule({
   declarations: [
     AppComponent,
-
     HomeComponent,
-      LoginComponent,
-      CreatePostComponent,
-      ViewPostComponent,
+    LoginComponent,
+    CreatePostComponent,
+    ViewPostComponent,
     
   ],
   imports: [
