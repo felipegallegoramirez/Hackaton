@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { PerfilUserComponent } from './perfil-user/perfil-user.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { ViewPostComponent } from './view-post/view-post.component';
+import { ChallengesComponent } from './challenges/challenges.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ViewPostComponent } from './view-post/view-post.component';
     LoginComponent,
     CreatePostComponent,
     ViewPostComponent,
+    ChallengesComponent,
     
   ],
   imports: [

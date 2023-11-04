@@ -5,6 +5,8 @@ import { LoginComponent } from './login/login.component';
 import { PerfilUserComponent } from './perfil-user/perfil-user.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { ViewPostComponent } from './view-post/view-post.component';
+import { ChallengesComponent } from './challenges/challenges.component';
+
 
 const routes: Routes = [
     {path: 'home', component: HomeComponent},
@@ -12,6 +14,7 @@ const routes: Routes = [
     {path: 'perfilUser', component: PerfilUserComponent},
     {path: 'createPost', component: CreatePostComponent},
     {path: 'post/:id', component: ViewPostComponent},
+    {path: 'challenges', component: ChallengesComponent}
 ]
 
 @NgModule({
