@@ -13,6 +13,7 @@ export class LoginComponent {
   constructor(private userService : UserService) { }
 
   ngOnInit(): void {
+    this.CheckUser();
     const signUpButton = document.getElementById('signUp');
     const signInButton = document.getElementById('signIn');
     const container = document.getElementById('container');
@@ -28,6 +29,14 @@ export class LoginComponent {
       container.classList.remove("right-panel-active");
     });
 
+  }
+
+  CheckUser(){
+    let x = localStorage.getItem("user") || ""
+    let User = JSON.parse(x);
+    if(User){
+      window.location.replace("http://localhost:4200/home");
+    }
   }
 
   formLogin = new FormGroup({
