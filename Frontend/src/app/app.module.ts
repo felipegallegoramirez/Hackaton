@@ -8,7 +8,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+<<<<<<< HEAD
+=======
 import { PerfilUserComponent } from './perfil-user/perfil-user.component';
+>>>>>>> dcebf1af483ddd5d8dedf362debbf34e22b05de5
 import { CreatePostComponent } from './create-post/create-post.component';
 import { ViewPostComponent } from './view-post/view-post.component';
 
@@ -17,8 +20,11 @@ import { ViewPostComponent } from './view-post/view-post.component';
   declarations: [
     AppComponent,
     HomeComponent,
+<<<<<<< HEAD
+=======
       LoginComponent,
       PerfilUserComponent,
+>>>>>>> dcebf1af483ddd5d8dedf362debbf34e22b05de5
     LoginComponent,
     CreatePostComponent,
     ViewPostComponent,
