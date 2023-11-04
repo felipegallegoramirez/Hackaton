@@ -1,5 +1,5 @@
 export class Post {
-    id:String="";
+    _id:string="";
     title: string = '';
     username: string = '';
     user_id: string = '';

@@ -12,12 +12,13 @@ import { Post } from '../models/post';
 export class ViewPostComponent implements OnInit {
 
   constructor(public activatedRoute:ActivatedRoute, public postService:PostService) { }
-
+  data:Post= new Post
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => { 
       var idsession= params['id'];
       this.postService.getPost(idsession).subscribe((res)=>{
         this.datos(res);
+        this.data = res as Post
       })
       
     });
@@ -53,7 +54,27 @@ export class ViewPostComponent implements OnInit {
   }
 
   public comentario(){
-    
+    let da =JSON.parse(localStorage.getItem("user")||"")
+    let x = <HTMLInputElement>document.getElementById("comentar");
+    if(!this.data.comentario){
+      this.data.comentario=[{
+          text:x.value||"",
+          date: "aa",
+          user_id: da.id,
+          user_name: da.name,
+
+      }]
+    }else{
+      this.data.comentario.push({
+        text:x.value||"",
+        date: "",
+        user_id: da.id,
+        user_name: da.name,
+    })
+    }
+    this.postService.putPost(this.data,this.data._id).subscribe(res=>{
+
+    })
   }
 
   

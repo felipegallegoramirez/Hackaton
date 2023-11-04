@@ -48,4 +48,21 @@ input{
     overflow: hidden;
     transition: all 0.2s;
     margin: 20px 0px;
+    border: 2px solid #aaaa;
+    width: calc(100% - 200px );
+    margin-right:20px ;
+
+}
+
+.comentario{
+    margin: 20px 0px;
+    border-radius: 20px;
+    text-align: initial;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 20px 10px 30px #000000a0;
+}
+
+.comentario>p:first-child{
+    font-weight: 600;
 }

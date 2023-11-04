@@ -27,11 +27,11 @@ const createPostSchema = Joi.object({
 
 
 const updatePostSchema = Joi.object({
-  id:id ,
+  _id:id ,
   title:title,
   user_id:user_id,
-  data:data,
-  coment:coment
+  data:Joi.any(),
+  comentario:coment
 });
 
 
