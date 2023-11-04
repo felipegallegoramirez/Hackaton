@@ -2,54 +2,43 @@ const { string, number } = require("joi");
 const mongoose = require("mongoose");
 const StorageScheme = new mongoose.Schema(
   {
-    name: {
-      type: String,
-      require: true
-    },
-    email: {
+    title: {
       type: String,
       required: true,
-      unique: true,
       trim: true
     },
-    password: {
+    user_id: {
       type: String,
-      require: true,
+      required: true,
+      trim: true
     },
 
-    publication: [{
-      type: String,
-    }],
-
-    follows: [{
-      type: String,
-    }],
-
-    followers:[{
-      type: String,
-    }],
-
-    permissions: [{
-      type: Number,
-    }],
-
-    verified: {
-      state: {
-        type: Number,
-        require: false
-      },
-      code: {
-        type: Number,
-        require: false
-      },
-    },
-
-    ips:[{
+    data:{
+      ty:{ // Esto es que tipo de archivo es (Imagen, Parrafo, )
         type: String,
-        require: true
-      }]
+      },
+      data:{
+        type: String,
+      }
     },
 
+    comentario:[{
+      text:{
+        type: String,
+      },
+      date:{
+        type: String,
+      },
+      user_id:{
+        type: String,
+      },
+      user_name:{
+        type: String,
+      }
+
+    }]
+
+  },
 
   {
     versionKey: false,
