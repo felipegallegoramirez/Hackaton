@@ -52,6 +52,10 @@ export class ViewPostComponent implements OnInit {
     document.getElementById("centro")?.appendChild(z)
   }
 
+  public comentario(){
+    
+  }
+
   
 
 }

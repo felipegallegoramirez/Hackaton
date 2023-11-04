@@ -21,7 +21,8 @@ const createPostSchema = Joi.object({
   title:title.required(),
   user_id:user_id.required() ,
   data:data.required(),
-  comentario:coment
+  comentario:coment,
+  username:Joi.string()
 });
 
 
