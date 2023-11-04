@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./perfil-user.component.css']
 })
 export class PerfilUserComponent {
+    VisibleVar:number=1;
+   
+    constructor() { }
+  
+    ngOnInit(): void {
+    }
+    Hide(){
+
+      let reason = document.getElementById("PerfilUser-totalinfo");
+      reason?.classList.add("Visto")
+
+
+
+    }
+
 
 }
