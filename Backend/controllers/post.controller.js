@@ -77,5 +77,14 @@ PostCtrl.deletePost = async (req, res, next) => {
 };
 
 
+PostCtrl.getPostsByUser = async (req, res, next) => {
+    try{
+        const save = await Post.find({ userId: user_id });
+        res.status(200).send(save)
+    }catch(err){
+        res.status(400).send(err)
+
+    }
+};
 
 module.exports = PostCtrl;

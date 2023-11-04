@@ -48,9 +48,33 @@ UserCtrl.editUser = async (req, res, next) => {
         res.status(200).send(save)
     }catch(err){
     res.status(400).send(err)
-}
+}}
 
-};
+
+UserCtrl.addFollow = async (req, res, next) => {
+    try{
+        const { id } = req.params;
+        let userdb = await User.findById(id);
+        userdb.follows = userdb.follows.push(req.body)
+        save = await User.findByIdAndUpdate(id, {$set: userdb}, {new: true});
+        res.status(200).send(save)
+    }catch(err){
+    res.status(400).send(err)
+}}
+
+UserCtrl.addFollower = async (req, res, next) => {
+    try{
+        const { id } = req.params;
+        let userdb = await User.findById(id);
+        userdb.followers = userdb.followers.push(req.body)
+        save = await User.findByIdAndUpdate(id, {$set: userdb}, {new: true});
+        res.status(200).send(save)
+    }catch(err){
+    res.status(400).send(err)
+}}
+
+
+
 
 UserCtrl.deleteUser = async (req, res, next) => {
     try{

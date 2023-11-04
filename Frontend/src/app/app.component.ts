@@ -24,6 +24,8 @@ export class AppComponent {
         this.name = User.name;
         let element = document.getElementById("User");
         element!.style.display = "flex";
+        let elementCrearP = document.getElementById("crearP");
+        elementCrearP!.style.display = "flex";
         let elementLogin = document.getElementById("Log-in");
         elementLogin!.style.display="none";
       }
