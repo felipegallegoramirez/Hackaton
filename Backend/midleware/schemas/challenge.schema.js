@@ -6,8 +6,8 @@ const user_id = Joi.string();
 const imgurl = Joi.string();
 const stage = Joi.string();
 const date = Joi.string();
-const users = Joi.array(Joi.string());
-const position = Joi.array(Joi.object({
+const users = Joi.array().items(Joi.string());
+const position = Joi.array().items(Joi.object({
   user: Joi.string(),
   points: Joi.string()
 }))
@@ -42,4 +42,4 @@ const getChallengeSchema = Joi.object({
 
 
 
-module.exports = { createChallengeSchema, updateChallengeSchema, getChallengeSchema, LoginChallengeSchema }
+module.exports = { createChallengeSchema, updateChallengeSchema, getChallengeSchema }
