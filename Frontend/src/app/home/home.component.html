@@ -18,15 +18,15 @@
             </ul>         
         </div>
     </div>
-    <div class="feed">
+    <div class="feed" *ngFor="let Card of Cards">
         <div class="BoxPub">
             <div class="User">
                 <img  class="photo-user" src="../../assets/usuario.png" alt="">
-                <h3>Sergio</h3>
+                <h3>{{Card.username}}</h3>
             </div>
-            <div class="main-pub">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam tempore repellat quibusdam rem cum quis saepe quam animi! Esse quas provident exercitationem sed optio beatae unde molestiae voluptatem magni placeat.</p>
-                <img src="" alt="">
+            <div class="main-pub"> 
+                <p>{{Card.data[1].data}}</p>
+                <img src="http://localhost:3000/public/{{Card.data[2].data}}" alt="">
             </div>
             <div class="botons">
                 <img  class="Like" src="../../assets/me-gusta.png" alt="">    
