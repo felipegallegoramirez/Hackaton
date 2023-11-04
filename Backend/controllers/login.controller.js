@@ -29,13 +29,32 @@ const loginCtrl = async (req, res, next) => {
 
     user = await User.findByIdAndUpdate(user._id, user)
     console.log(x)
-    await messageLogin(user.email, user._id, x)
-    res.status(200).json({ message: "enviado",_id:user._id})
+    var user = await User.findById(id);
+    var ipguard = req.header('x-forwarded-for') || req.connection.remoteAddress;
+      console.log("No ip")
+      if (!user.ips.find(x => x === ipguard)) {
+        console.log("No ip")
+        user.ips.push(ipguard)
+      }
 
-  } catch (e) {
-    next(boom.badRequest(e));
+      user.verified.state = 1
+      user = await User.findByIdAndUpdate(user._id, user)
+      const tokenJwt = await tokenSign(user);
+
+      const data = {
+        token: tokenJwt,
+        id: user._id,
+      };
+
+
+      res.json(data);
+  }catch(e){
+    console.log(e)
   }
-};
+    
+
+  };
+
 
 const message = async (req, res, next) => {
   try {

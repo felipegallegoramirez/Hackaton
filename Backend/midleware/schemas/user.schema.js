@@ -4,9 +4,9 @@ const id = Joi.string();
 const name = Joi.string();
 const email = Joi.string().email();
 const password = Joi.string().min(8).max(20);
-const publication = Joi.array(Joi.string());
-const follows = Joi.array(Joi.string());
-const followers = Joi.array(Joi.string());
+const publication = Joi.array().items(Joi.string());
+const follows = Joi.array().items(Joi.string());
+const followers = Joi.array().items(Joi.string());
 
 const createUserSchema = Joi.object({
   name:name.required(),
