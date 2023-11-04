@@ -1,10 +1,10 @@
 <nav class="BodyNav">
     <div class="NavFirstHalf">
         <div class="Search">
-            <a routerLink="">Home</a>
+            <a routerLink="/home">Home</a>
         </div>
         <div class="Credit">
-            <a routerLink="">Crear publicación</a>
+            <a routerLink="/createPost">Crear publicación</a>
         </div>
         <div class="Credit">
             <a routerLink="">Retos</a>
@@ -12,15 +12,11 @@
     </div>
     <div class="NavSecondHalf">
         <div class="Log-in" id="Log-in">
-            <a routerLink="">Iniciar sesión</a>
+            <a routerLink="/login">Iniciar sesión</a>
         </div>
         <div class="Log-in" id="User">
-            <a routerLink=""></a>
-            <i  class="material-icons" >logout</i>
-        </div>
-        <div class="Log-in" id="Dealer">
-            <a routerLink=""></a>
-            <i  class="material-icons" >logout</i>
+            <a routerLink="/">{{name}}</a>
+            <i (click)="CloseSession()" class="material-icons" >logout</i>
         </div>
     </div>
 </nav>

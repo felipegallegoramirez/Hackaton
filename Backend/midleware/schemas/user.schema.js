@@ -9,9 +9,13 @@ const follows = Joi.array().items(Joi.string());
 const followers = Joi.array().items(Joi.string());
 
 const createUserSchema = Joi.object({
+  id:Joi.any(),
   name:name.required(),
   email:email.required() ,
   password:password.required(),
+  publication:Joi.any(),
+  follows:Joi.any(),
+  followers:Joi.any(),
 });
 
 const LoginUserSchema  = Joi.object({

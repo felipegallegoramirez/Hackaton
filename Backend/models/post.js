@@ -11,8 +11,12 @@ const StorageScheme = new mongoose.Schema(
       type: String,
       required: true,
       trim: true
+    }, 
+    username: {
+      type: String,
+      required: true,
+      trim: true
     },
-
     data:[{
       ty:{ // Esto es que tipo de archivo es (Imagen, Parrafo, )
         type: String,
@@ -46,4 +50,4 @@ const StorageScheme = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.models.Users || mongoose.model("Post", StorageScheme);
+module.exports = mongoose.models.Post || mongoose.model("Post", StorageScheme);

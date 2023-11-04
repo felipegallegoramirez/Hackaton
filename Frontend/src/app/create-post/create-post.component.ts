@@ -44,7 +44,7 @@ export class CreatePostComponent implements OnInit {
     div.appendChild(input)
     document.getElementById("centro")?.appendChild(div)
   }
-
+  
   addtext():void{
     this.i.push(1)
     var div = document.createElement("div")
@@ -83,15 +83,16 @@ export class CreatePostComponent implements OnInit {
         }
 
       if (this.i[r-1]==2){
-        data.ty=res[z]
-        data.data=this.i[r-1].toString()
+        console.log(res)
+        data.data=res.url[z]
+        data.ty=this.i[r-1].toString()
         z+=1;
       }
       else if (this.i[r-1]==1){
         let xx = <HTMLInputElement>document.getElementById("text_"+r);
         var asd= xx.value
-        data.ty=asd
-        data.data=this.i[r-1].toString()
+        data.data=asd
+        data.ty=this.i[r-1].toString()
       }
       item.push(data)
     }
@@ -99,7 +100,7 @@ export class CreatePostComponent implements OnInit {
       var publi= new Post();
       publi.title=title
       publi.data=item
-      console.log(publi)
+      publi.user_id=localStorage.getItem("id")||""
       this.postService.postPost(publi).subscribe((res)=>{
         window.location.replace("http://localhost:4200/post/"+res._id);
       }

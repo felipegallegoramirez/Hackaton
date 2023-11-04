@@ -1,4 +1,6 @@
 const Post = require("../models/post");
+const User = require("../models/user")
+
 const {encrypt} =  require("../utils/encript")
 
 const PostCtrl = {};
@@ -22,7 +24,13 @@ PostCtrl.createPost = async (req, res, next) => {
             data:req.body.data,
             comentario:req.body.comentario,
         }
+        var user= User.findById(body.user_id)
+
+
         var save= await Post.create(body);
+
+        user.publication.push(save._id)
+        User.findByIdAndUpdate(user._id,user)
         res.status(200).send(save)
     }catch(err){
         res.status(400).send(err)
@@ -35,7 +43,7 @@ PostCtrl.getPost = async (req, res, next) => {
     try{
         const { id } = req.params;
         const save = await Post.findById(id);
-        res.status(400).send(save)
+        res.status(200).send(save)
     }catch(err){
         res.status(400).send(err)
 

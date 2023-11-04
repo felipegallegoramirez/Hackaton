@@ -39,6 +39,7 @@ export class LoginComponent {
     email: new FormControl('',[Validators.required,Validators.email]),
     name: new FormControl('',[Validators.required]),
     password: new FormControl('',[Validators.required])
+
   });
 
 
@@ -46,9 +47,10 @@ export class LoginComponent {
   sendR(){
     console.log("buenas send")
       var new_user: User = new User()
+      new_user.name= this.formRegistro.value.name || " "
       new_user.email = this.formRegistro.value.email || " "
       new_user.password= this.formRegistro.value.password || " "
-
+      console.log(new_user)
       this.userService.createUser(new_user) .subscribe(res=>{
         if(res){
           let container = document.getElementById('container')
@@ -56,7 +58,7 @@ export class LoginComponent {
         }
 
       })
-
+    
       //window.location.replace("http://localhost:4200/about");
     
     this.formRegistro.reset()
@@ -66,11 +68,14 @@ export class LoginComponent {
 
   sendL(){
     
-    var user = new User();
-    user.email = this.formLogin.value.email || " "
-    user.password = this.formLogin.value.password || " "
-
-    this.userService.postAuth(user).subscribe(res => {
+    let data = {
+      "email": this.formLogin.value.email || " ",
+      "password": this.formLogin.value.password || " "
+    }
+    console.log("hola")
+    
+    this.userService.postAuth(data).subscribe(res => {
+      console.log("hola")
       let sesion = res as Sesion
       if (sesion) {
         
