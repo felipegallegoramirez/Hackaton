@@ -11,8 +11,12 @@ const StorageScheme = new mongoose.Schema(
       type: String,
       required: true,
       trim: true
+    }, 
+    username: {
+      type: String,
+      required: true,
+      trim: true
     },
-
     data:[{
       ty:{ // Esto es que tipo de archivo es (Imagen, Parrafo, )
         type: String,
