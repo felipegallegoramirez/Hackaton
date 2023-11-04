@@ -10,6 +10,9 @@ router.get("/:id",checkpermision(0),validatorHandler(getUserSchema, 'params'), u
 router.post("/",validatorHandler(createUserSchema,"body"),user.createUser)
 router.put("/:id",validatorHandler(createUserSchema,"body"),user.editUser )
 
+router.put("/follow/:id",user.addFollow )
+router.put("/follower/:id",user.addFollower )
+
 router.delete("/:id",checkpermision(0),validatorHandler(getUserSchema, 'params'), user.deleteUser);
 
 

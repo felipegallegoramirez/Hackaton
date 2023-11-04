@@ -100,7 +100,10 @@ export class CreatePostComponent implements OnInit {
       var publi= new Post();
       publi.title=title
       publi.data=item
-      publi.user_id=localStorage.getItem("id")||""
+      let da =JSON.parse(localStorage.getItem("user")||"")
+      publi.user_id=da.id
+      publi.username=da.name
+      console.log(publi)
       this.postService.postPost(publi).subscribe((res)=>{
         window.location.replace("http://localhost:4200/post/"+res._id);
       }

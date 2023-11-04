@@ -22,11 +22,13 @@ const StorageScheme = new mongoose.Schema(
     }],
 
     follows: [{
-      type: String,
+      name: String,
+      idUser: String,
     }],
 
     followers:[{
-      type: String,
+      name: String,
+      idUser: String,
     }],
 
     permissions: [{

@@ -18,6 +18,9 @@ const StorageScheme = new mongoose.Schema(
       trim: true
     },
     data:[{
+      _id:{
+        type: String,
+      },
       ty:{ // Esto es que tipo de archivo es (Imagen, Parrafo, )
         type: String,
       },

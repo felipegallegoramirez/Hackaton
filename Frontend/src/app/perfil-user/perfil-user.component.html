@@ -16,9 +16,7 @@
 
                 <h1 class="title">Brandon Martinez</h1>
 
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est neque dolorem tempore quisquam nostrum
-                    enim, excepturi commodi quasi voluptates eius, ipsum accusamus quo, adipisci laborum doloribus
-                    dolor. Minus, dolorem iure?</p>
+                <p>Soy una persona apasionada, amante del deporte y la cultura. Me gusta realizar ejercios y yoga al desnudo.</p>
             </div>
             <h1 class="title">Logros</h1>
 
@@ -61,25 +59,24 @@
         </div>
     </div>
 
+<<<<<<< HEAD
         <div class="contain">
+=======
+        <div *ngFor="let Card of Cards">
+>>>>>>> d0fb3f975eeb84ca906a7489ec6de0075f3413b5
 
             <div class="BoxPub">
-
                 <div class="User">
-                    <img class="photo-user" src="../../assets/usuario.png" alt="">
-                    <h3>Sergio</h3>
+                    <img  class="photo-user" src="../../assets/usuario.png" alt="">
+                    <h3>{{Card.username}}</h3>
                 </div>
-                <div class="main-pub">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam tempore repellat quibusdam rem
-                        cum quis saepe quam animi! Esse quas provident exercitationem sed optio beatae unde molestiae
-                        voluptatem magni placeat.</p>
-                    <img src="" alt="">
+                <div class="main-pub"> 
+                    <p>{{Card.data[1].data}}</p>
+                    <img src="http://localhost:3000/public/{{Card.data[0].data}}" alt="">
                 </div>
                 <div class="botons">
-                    <img class="Like" src="../../assets/me-gusta.png" alt="">
+                    <img  class="Like" src="../../assets/me-gusta.png" alt="">    
                 </div>
-
-
             </div>
         </div>
 

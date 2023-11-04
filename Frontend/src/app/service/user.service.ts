@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Sesion } from '../models/sesion';
 import { User } from '../models/user';
+import { Post } from '../models/post';
 
 
 @Injectable({
@@ -30,6 +31,10 @@ export class UserService {
 
   putUser(User: User){
     return this.http.put(this.apiUrl + `/${User.id}`, User);
+  }
+
+  getPostsUnique(id:string){
+    return this.http.get<Post[]>(this.apiUrl+`/getPostsUnique/${id}`);
   }
 
   getUsers(){

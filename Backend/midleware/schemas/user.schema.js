@@ -16,6 +16,7 @@ const createUserSchema = Joi.object({
   publication:Joi.any(),
   follows:Joi.any(),
   followers:Joi.any(),
+
 });
 
 const LoginUserSchema  = Joi.object({

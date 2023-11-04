@@ -23,16 +23,22 @@ PostCtrl.createPost = async (req, res, next) => {
             user_id:req.body.user_id,
             data:req.body.data,
             comentario:req.body.comentario,
+            username:req.body.username
         }
         var user= User.findById(body.user_id)
 
 
         var save= await Post.create(body);
+        if(!user.publication){
+            user.publication=[save._id]
+        }else{
+            user.publication.push(save._id)
+        }
 
-        user.publication.push(save._id)
         User.findByIdAndUpdate(user._id,user)
         res.status(200).send(save)
     }catch(err){
+        console.log(err)
         res.status(400).send(err)
     }
 
@@ -71,5 +77,14 @@ PostCtrl.deletePost = async (req, res, next) => {
 };
 
 
+PostCtrl.getPostsByUser = async (req, res, next) => {
+    try{
+        const save = await Post.find({ userId: user_id });
+        res.status(200).send(save)
+    }catch(err){
+        res.status(400).send(err)
+
+    }
+};
 
 module.exports = PostCtrl;
