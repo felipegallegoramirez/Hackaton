@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Sesion } from '../models/sesion';
 import { User } from '../models/user';
+import { Post } from '../models/post';
 
 
 @Injectable({
@@ -31,8 +32,18 @@ export class UserService {
   putUser(User: User){
     return this.http.put(this.apiUrl + `/${User.id}`, User);
   }
-
+  getPostsUnique(id:string){
+    return this.http.get<Post[]>(`http://localhost:3000/api/post/getPostsUnique/${id}`);
+  }
+  
   getUsers(){
     return this.http.get<User[]>(this.apiUrl);
+  }
+
+  addFollow(data :any, id: string){
+    return this.http.put(this.apiUrl + `/follow/${id}`, data);
+  }
+  addFollower(data :any, id: string){
+    return this.http.put(this.apiUrl + `/follower/${id}`, data);
   }
 }

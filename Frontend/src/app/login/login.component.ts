@@ -13,7 +13,7 @@ export class LoginComponent {
   constructor(private userService : UserService) { }
 
   ngOnInit(): void {
-    this.CheckUser();
+    
     const signUpButton = document.getElementById('signUp');
     const signInButton = document.getElementById('signIn');
     const container = document.getElementById('container');
@@ -28,6 +28,7 @@ export class LoginComponent {
       // @ts-ignore: Object is possibly 'null'
       container.classList.remove("right-panel-active");
     });
+    this.CheckUser();
 
   }
 

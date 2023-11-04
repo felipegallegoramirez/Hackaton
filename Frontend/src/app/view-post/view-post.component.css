@@ -19,3 +19,50 @@
     box-sizing: border-box;
     box-shadow: 20px 10px 30px #000000a0;
 }
+
+button {
+    font-family: inherit;
+    font-size: 20px;
+    background: var(--c1);
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    margin: 20px 0px;
+   }
+   
+input{
+    font-family: inherit;
+    font-size: 20px;
+    background: white;
+    color: var(--c1);
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    margin: 20px 0px;
+    border: 2px solid #aaaa;
+    width: calc(100% - 200px );
+    margin-right:20px ;
+
+}
+
+.comentario{
+    margin: 20px 0px;
+    border-radius: 20px;
+    text-align: initial;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 20px 10px 30px #000000a0;
+}
+
+.comentario>p:first-child{
+    font-weight: 600;
+}

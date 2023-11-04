@@ -11,18 +11,20 @@ import { LoginComponent } from './login/login.component';
 import { PerfilUserComponent } from './perfil-user/perfil-user.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { ViewPostComponent } from './view-post/view-post.component';
+import { PerfilUserprivateComponent } from './perfil-userprivate/perfil-userprivate.component';
+import { ChallengesComponent } from './challenges/challenges.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-      LoginComponent,
-      PerfilUserComponent,
+    HomeComponent,     
     LoginComponent,
+    PerfilUserprivateComponent,
+    PerfilUserComponent,
     CreatePostComponent,
     ViewPostComponent,
-    
+  
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,6 @@ import { ViewPostComponent } from './view-post/view-post.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule
-  
   ],
   providers: [],
   bootstrap: [AppComponent]

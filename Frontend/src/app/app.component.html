@@ -7,7 +7,7 @@
             <a routerLink="/createPost">Crear publicación</a>
         </div>
         <div class="Credit">
-            <a routerLink="">Retos</a>
+            <a routerLink="/challenge">Retos</a>
         </div>
     </div>
     <div class="NavSecondHalf">
@@ -15,7 +15,7 @@
             <a routerLink="/login">Iniciar sesión</a>
         </div>
         <div class="Log-in" id="User">
-            <a routerLink="/">{{name}}</a>
+            <a routerLink="perfilUser/{{idUser }}">{{name}}</a>
             <i (click)="CloseSession()" class="material-icons" >logout</i>
         </div>
     </div>
