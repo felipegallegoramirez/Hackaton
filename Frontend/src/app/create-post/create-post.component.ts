@@ -83,15 +83,16 @@ export class CreatePostComponent implements OnInit {
         }
 
       if (this.i[r-1]==2){
-        data.ty=res[z]
-        data.data=this.i[r-1].toString()
+        console.log(res)
+        data.data=res.url[z]
+        data.ty=this.i[r-1].toString()
         z+=1;
       }
       else if (this.i[r-1]==1){
         let xx = <HTMLInputElement>document.getElementById("text_"+r);
         var asd= xx.value
-        data.ty=asd
-        data.data=this.i[r-1].toString()
+        data.data=asd
+        data.ty=this.i[r-1].toString()
       }
       item.push(data)
     }

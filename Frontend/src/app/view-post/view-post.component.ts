@@ -39,7 +39,7 @@ export class ViewPostComponent implements OnInit {
 
   public imagen(a:string):void{
     let y = document.createElement("img")
-    y.src="http://localhost:3000/"+a
+    y.src="http://localhost:3000/public/"+a
     y.style.cssText="width: 600px;border-radius: 20px;box-shadow: 20px 10px 30px #000000a0;margin: 20px 0px;"
     document.getElementById("centro")?.appendChild(y)
   }
