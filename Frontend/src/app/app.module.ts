@@ -18,19 +18,13 @@ import { ChallengesComponent } from './challenges/challenges.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-      LoginComponent,
-      PerfilUserComponent,
+    HomeComponent,     
     LoginComponent,
-    CreatePostComponent,
-    ViewPostComponent,
     PerfilUserprivateComponent,
-    LoginComponent,
     PerfilUserComponent,
-    LoginComponent,
     CreatePostComponent,
     ViewPostComponent,
-    
+  
   ],
   imports: [
     BrowserModule,
@@ -38,7 +32,6 @@ import { ChallengesComponent } from './challenges/challenges.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule
-  
   ],
   providers: [],
   bootstrap: [AppComponent]

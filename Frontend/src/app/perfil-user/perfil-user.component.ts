@@ -32,4 +32,9 @@ export class PerfilUserComponent implements OnInit{
       this.userService.getUser(idsession).subscribe(( res ) => {this.User = res as User})
     })
   }
+  
+
+  follow(){
+    
+  }
 }
